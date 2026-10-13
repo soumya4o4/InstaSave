@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Set to true to re-enable the 2-free-downloads limit and the VIP popup
     const PAYWALL_ENABLED = false;
     const FREE_DOWNLOADS_LIMIT = PAYWALL_ENABLED ? 2 : Infinity; // Allow 2 free trial downloads
+    if (!PAYWALL_ENABLED && openVipModalBtn) openVipModalBtn.style.display = "none";
     let downloadCount = parseInt(localStorage.getItem("reelsave_dl_count") || "0", 10);
     let vipPassKey = localStorage.getItem("reelsave_vip_key") || null;
     let isVipUser = Boolean(vipPassKey);
@@ -653,7 +654,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // =========================================================================
     // SOCIAL SHARING (WhatsApp, Telegram, X, Facebook, Copy)
     // =========================================================================
-    const currentUrl = window.location.href;
+    const currentUrl = window.location.origin + "/";
     const shareText = "Download Instagram Reels, Stories & MP3 Audio in 1080p HD for free with ReelSave:";
 
     const shareWhatsapp = document.getElementById("shareWhatsapp");

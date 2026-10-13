@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://reelsave.app/sitemap.xml
+Sitemap: https://www.reeler.shop/sitemap.xml

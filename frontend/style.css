@@ -2110,6 +2110,18 @@ body {
     transition: var(--transition);
 }
 
+.footer-link-btn {
+    text-decoration: none;
+}
+
+.footer-disclaimer {
+    text-align: center;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin: 0 0 16px;
+    line-height: 1.5;
+}
+
 .footer-link-btn:hover {
     color: var(--accent-pink);
     text-decoration: underline;

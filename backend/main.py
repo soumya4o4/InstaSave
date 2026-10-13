@@ -33,7 +33,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=allowed_origins if allowed_origins else ["*"],
     # Always allow the deployed Vercel frontend, even if ALLOWED_ORIGINS on the host is stale
-    allow_origin_regex=r"https://instasave-[a-z0-9-]+\.vercel\.app",
+    allow_origin_regex=r"https://((instasave|reeler)[a-z0-9-]*\.vercel\.app|(www\.)?reeler\.shop)",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
