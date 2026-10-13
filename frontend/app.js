@@ -59,7 +59,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let selectedFilename = "reelsave_video.mp4";
 
     // VIP Membership State
-    const FREE_DOWNLOADS_LIMIT = 2; // Allow 2 free trial downloads
+    // Set to true to re-enable the 2-free-downloads limit and the VIP popup
+    const PAYWALL_ENABLED = false;
+    const FREE_DOWNLOADS_LIMIT = PAYWALL_ENABLED ? 2 : Infinity; // Allow 2 free trial downloads
     let downloadCount = parseInt(localStorage.getItem("reelsave_dl_count") || "0", 10);
     let vipPassKey = localStorage.getItem("reelsave_vip_key") || null;
     let isVipUser = Boolean(vipPassKey);
